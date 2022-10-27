@@ -3,9 +3,10 @@ import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import logo from '../../../Assets/Logo/logo.jpg'
 
 
 const Header = () => {
@@ -20,7 +21,9 @@ const Header = () => {
     return (
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand ><Link to='/'>Tech Learn BD</Link></Navbar.Brand>
+        <Navbar.Brand >
+         <Link to='/'><img src={logo} width={256} className="rounded" alt="" /></Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
