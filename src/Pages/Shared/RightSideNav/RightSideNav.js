@@ -3,7 +3,6 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { FaGoogle, FaGithub, FaFacebook, FaTwitter, FaWhatsapp, FaTwitch } from 'react-icons/fa'
 import ListGroup from 'react-bootstrap/ListGroup';
-import BrandCarousel from '../BrandCarousel/BrandCarousel';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
 
@@ -38,7 +37,7 @@ const RightSideNav = () => {
                 </ListGroup>
             </div>
             <div>
-                <BrandCarousel></BrandCarousel>
+                
             </div>
         </div>
     );
