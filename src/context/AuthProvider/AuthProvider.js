@@ -1,9 +1,10 @@
 import { getAuth } from 'firebase/auth';
 import React, { createContext, useState } from 'react';
-import App from '../../App';
+import app from '../../firebase/firebase.config';
+
 
 export const AuthContext = createContext()
-const auth = getAuth(App)
+const auth = getAuth(app)
 
 
 const AuthProvider = ({children}) => {
