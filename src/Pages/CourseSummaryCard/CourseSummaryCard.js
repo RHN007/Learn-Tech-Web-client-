@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 const CourseSummaryCard = ({ course }) => {
     const { _id, image_url, rating, title } = course
@@ -14,7 +14,7 @@ const CourseSummaryCard = ({ course }) => {
                  Rating:   {rating.number} 
                  <br /> <small>Content:  {rating.badge}</small> 
                 </Card.Text>
-                <Button variant="primary">Buy This Course</Button>
+                <Link variant="primary" to={`/course/${_id}`}>Details of Course</Link>
             </Card.Body>
         </Card>
 

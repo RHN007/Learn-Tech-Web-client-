@@ -1,8 +1,14 @@
-# Getting Started with Create React App
+# Website Live Site : Learn tech 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the website  [Live Site](https://tech-learn-7bb79.web.app/).
 
-## Available Scripts
+## Technologies we have used :
+  * I have used React bootstraps for designing my website ; 
+  * Used React-Router-Dom 
+  * Use React Icons 
+  * Used Firebase for sign in and logout 
+  * Used two singIn Method Google and Github 
+  * You can see the website product page . 
 
 In the project directory, you can run:
 
