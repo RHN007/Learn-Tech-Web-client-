@@ -8,6 +8,7 @@ import { Button, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../../Assets/Logo/logo.jpg'
 import { FaUser } from 'react-icons/fa';
+import LeftSideNav from '../LeftSideNav/LeftSideNav';
 
 
 const Header = () => {
@@ -54,6 +55,9 @@ const Header = () => {
               }
             </Nav.Link>
           </Nav>
+          <div className='d-lg-none'>
+            <LeftSideNav></LeftSideNav>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
