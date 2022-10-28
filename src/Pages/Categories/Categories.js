@@ -6,7 +6,7 @@ const Categories = () => {
     const categoryCourses = useLoaderData()
    
     return (
-        <div className='d-lg-flex justify-content-center'>
+        <div className='d-lg-flex justify-content-center text-decoration-none'>
            
            {
             categoryCourses.map(course => <CourseSummaryCard key={course._id} 

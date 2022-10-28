@@ -35,13 +35,13 @@ const RightSideNav = () => {
                 <Button onClick={handleGoogleSignIn} className='mb-2' variant="outline-primary"> <FaGoogle></FaGoogle>  Login with Google</Button>
                 <Button onClick={handleGitHubProvider} variant="outline-dark"> <FaGithub></FaGithub> Login with GitHub</Button>
             </ButtonGroup>
-            <div>
+            <div className='mt-4'>
                 <h5>Find us on </h5>
                 <ListGroup>
                     <ListGroup.Item className='mb-2'><FaFacebook /> Facebook</ListGroup.Item>
                     <ListGroup.Item className='mb-2'> <FaTwitter></FaTwitter>  Twitter</ListGroup.Item>
                     <ListGroup.Item className='mb-2'> <FaWhatsapp></FaWhatsapp> WhatsApp</ListGroup.Item>
-                    <ListGroup.Item className='mb-2'> <FaTwitch></FaTwitch> Twich</ListGroup.Item>
+                   
                 </ListGroup>
             </div>
             <div>
