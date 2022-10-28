@@ -27,12 +27,12 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
+            <Nav.Link >Courses</Nav.Link>
+            <Nav.Link>FAQ</Nav.Link>
            
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link href="#deets">Blog</Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
             {
                 user?.uid? 
@@ -42,8 +42,8 @@ const Header = () => {
                 
                 </>: 
                 <>
-                  <Link to='/login' className='me-3'>Login</Link>
-                  <Link to='/register'>Register</Link>
+                  <Link to='/login' className='text-white text-decoration-none '>Login</Link> /
+                  <Link to='/register' className='text-white text-decoration-none '>Register</Link>
                 </>
               }
             </Nav.Link>
