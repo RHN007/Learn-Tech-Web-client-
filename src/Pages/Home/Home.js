@@ -4,7 +4,6 @@ import CourseSummaryCard from '../CourseSummaryCard/CourseSummaryCard';
 
 const Home = () => {
     const courses = useLoaderData()
-    console.log(courses)
     return (
         <div className='course-design'>
             {

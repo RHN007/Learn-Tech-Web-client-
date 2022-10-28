@@ -8,6 +8,7 @@ import Login from '../Pages/Login/Login';
 import Register from '../Pages/Register/Register';
 import Blogs from '../Pages/Shared/Blogs/Blogs';
 import Courses from '../Pages/Shared/Courses/Courses';
+import FAQ from '../Pages/Shared/FAQ/FAQ';
 import TermsAndCondition from '../Pages/TermsAndCondition/TermsAndCondition';
 import PrivateRoutes from './PrivateRoutes/PrivateRoutes';
 
@@ -47,6 +48,10 @@ export const routes =  createBrowserRouter([
            {
             path: '/blogs', 
             element: <Blogs></Blogs>
+           },
+           {
+            path: '/faq', 
+            element: <FAQ></FAQ>
            },
            {
             path: '*', 

@@ -7,7 +7,7 @@ const Courses = () => {
   const  {title, details, image_url, category_id} = courses
     return (
         <Card >
-        <Card.Img variant="top" src={image_url}/>
+        <Card.Img variant="top" className='p-5'   src={image_url}/>
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Card.Text>
