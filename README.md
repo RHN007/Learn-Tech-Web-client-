@@ -1,8 +1,8 @@
-# Website Live Site : Learn tech 
+# Website Live Site : Learn Technology in an easy way 
 
-This is the website  [Live Site](https://tech-learn-7bb79.web.app/).
+This is the website  [Learn Tech](https://tech-learn-7bb79.web.app/).
 
-## Technologies we have used :
+## Technologies I have used :
   * I have used React bootstraps for designing my website ; 
   * Used React-Router-Dom 
   * Use React Icons 
