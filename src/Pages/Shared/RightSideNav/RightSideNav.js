@@ -5,17 +5,21 @@ import { FaGoogle, FaGithub, FaFacebook, FaTwitter, FaWhatsapp, FaTwitch } from 
 import ListGroup from 'react-bootstrap/ListGroup';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
 import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const RightSideNav = () => {
     const {providerLogin} = useContext(AuthContext); 
     const googleProvider = new GoogleAuthProvider()
     const gitHubProvider = new GithubAuthProvider()
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/'
     const handleGoogleSignIn = () => {
         providerLogin(googleProvider)
         .then(result => {
             const user = result.user; 
-            console.log(user)
+            navigate(from , {replace: true})
         })
         .catch(error => console.error('error', error))
     }
@@ -25,6 +29,7 @@ const RightSideNav = () => {
         .then(result => {
             const user = result.user; 
             console.log(user)
+            navigate(from , {replace: true})
         })
         .catch(error => console.error('error', error))
     }
