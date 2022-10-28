@@ -4,12 +4,13 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { FaGoogle, FaGithub, FaFacebook, FaTwitter, FaWhatsapp, FaTwitch } from 'react-icons/fa'
 import ListGroup from 'react-bootstrap/ListGroup';
 import { AuthContext } from '../../../context/AuthProvider/AuthProvider';
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 
 
 const RightSideNav = () => {
     const {providerLogin} = useContext(AuthContext); 
     const googleProvider = new GoogleAuthProvider()
+    const gitHubProvider = new GithubAuthProvider()
     const handleGoogleSignIn = () => {
         providerLogin(googleProvider)
         .then(result => {
@@ -19,13 +20,24 @@ const RightSideNav = () => {
         .catch(error => console.error('error', error))
     }
 
+    const handleGitHubProvider = () => {
+        providerLogin(gitHubProvider)
+        .then(result => {
+            const user = result.user; 
+            console.log(user)
+        })
+        .catch(error => console.error('error', error))
+    }
+
+
+
 
 
     return (
         <div>
             <ButtonGroup vertical>
                 <Button onClick={handleGoogleSignIn} className='mb-2' variant="outline-primary"> <FaGoogle></FaGoogle>  Login with Google</Button>
-                <Button variant="outline-dark"> <FaGithub></FaGithub> Login with GitHub</Button>
+                <Button onClick={handleGitHubProvider} variant="outline-dark"> <FaGithub></FaGithub> Login with GitHub</Button>
             </ButtonGroup>
             <div>
                 <h5>Find us on </h5>

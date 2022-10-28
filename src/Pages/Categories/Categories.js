@@ -1,12 +1,18 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import CourseSummaryCard from '../CourseSummaryCard/CourseSummaryCard';
 
 const Categories = () => {
     const categoryCourses = useLoaderData()
-    // console.log(categoryCourses)
+    console.log(categoryCourses)
     return (
-        <div>
-            <h2> This is category </h2>
+        <div className='d-lg-flex justify-content-center'>
+           
+           {
+            categoryCourses.map(course => <CourseSummaryCard key={course._id} 
+                                                            course = {course}
+            ></CourseSummaryCard>)
+           }
         </div>
     );
 };
