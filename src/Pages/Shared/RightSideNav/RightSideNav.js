@@ -29,10 +29,6 @@ const RightSideNav = () => {
         .catch(error => console.error('error', error))
     }
 
-
-
-
-
     return (
         <div>
             <ButtonGroup vertical>

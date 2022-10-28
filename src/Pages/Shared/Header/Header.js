@@ -4,9 +4,10 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-import { Button } from 'react-bootstrap';
+import { Button, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../../Assets/Logo/logo.jpg'
+import { FaUser } from 'react-icons/fa';
 
 
 const Header = () => {
@@ -27,12 +28,17 @@ const Header = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link >Courses</Nav.Link>
-            <Nav.Link>FAQ</Nav.Link>
+            <Link to='/' >Courses</Link>
+            <Link>FAQ</Link>
+            <Link>Blogs</Link>
            
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">Blog</Nav.Link>
+          <Nav.Link eventKey={2} href="#memes">
+              {user?.photoURL ? 
+              <Image style={{height: '40px'}} roundedCircle src={user?.photoURL}></Image> 
+              : <FaUser></FaUser>  }
+            </Nav.Link>
             <Nav.Link eventKey={2} href="#memes">
             {
                 user?.uid? 
