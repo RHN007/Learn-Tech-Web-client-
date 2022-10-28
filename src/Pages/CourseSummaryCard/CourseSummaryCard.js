@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
 const CourseSummaryCard = ({ course }) => {
-    const { _id, image_url, rating, title } = course
+    const { _id, image_url, rating, title, details } = course
     return (
 
         <Card style={{ width: '18rem' }} className="mt-3  ">
@@ -12,9 +12,12 @@ const CourseSummaryCard = ({ course }) => {
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>
                  Rating:   {rating.number} 
-                 <br /> <small>Content:  {rating.badge}</small> 
+                 <br /> <small>Content:  {rating.badge}
+                 </small> 
+                 {details.length > 200 ? <p>{details.slice(0, 250) + '......'} <Link to={`/course/${_id}`}>Read More</Link> </p> :
+                        <p>{details}</p>}
                 </Card.Text>
-                <Link variant="primary" to={`/course/${_id}`}>Details of Course</Link>
+              
             </Card.Body>
         </Card>
 

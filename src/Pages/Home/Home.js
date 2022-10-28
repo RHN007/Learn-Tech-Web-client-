@@ -6,7 +6,7 @@ const Home = () => {
     const courses = useLoaderData()
     console.log(courses)
     return (
-        <div>
+        <div className='course-design'>
             {
                 courses.map(n => <CourseSummaryCard key={n._id} course={n}></CourseSummaryCard>)
             }
