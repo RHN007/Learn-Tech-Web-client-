@@ -7,7 +7,7 @@ const LeftSideNav = () => {
    const [categories, setCategories] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5001/categories`)
+        fetch(`https://server-sooty-five.vercel.app/categories`)
         .then(res => res.json())
         .then(data =>setCategories(data))
     }, [])

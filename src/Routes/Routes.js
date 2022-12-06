@@ -20,17 +20,17 @@ export const routes =  createBrowserRouter([
             {
                 path: '/', 
                 element: <Home></Home>, 
-                loader : () => fetch(`http://localhost:5001/courses`)
+                loader : () => fetch(`https://server-sooty-five.vercel.app/courses`)
             }, 
             {
                 path: '/category/:id', 
                 element: <Categories></Categories>, 
-                loader: ({params}) => fetch(`http://localhost:5001/category/${params.id}`)
+                loader: ({params}) => fetch(`https://server-sooty-five.vercel.app/category/${params.id}`)
             }, 
             {
                 path: '/course/:id', 
                 element: <PrivateRoutes><Courses></Courses></PrivateRoutes>, 
-                loader: ({params}) => fetch(`http://localhost:5001/courses/${params.id}`)
+                loader: ({params}) => fetch(`https://server-sooty-five.vercel.app/courses/${params.id}`)
             },
             {
                 path: '/login', 
