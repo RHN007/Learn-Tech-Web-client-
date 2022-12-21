@@ -29,7 +29,7 @@ export const routes =  createBrowserRouter([
             }, 
             {
                 path: '/course/:id', 
-                element: <PrivateRoutes><Courses></Courses></PrivateRoutes>, 
+                element:<Courses></Courses>, 
                 loader: ({params}) => fetch(`https://server-sooty-five.vercel.app/courses/${params.id}`)
             },
             {
@@ -53,11 +53,14 @@ export const routes =  createBrowserRouter([
             path: '/faq', 
             element: <FAQ></FAQ>
            },
-           {
-            path: '*', 
-            element: <PageNotFound></PageNotFound>
-           }
+           
         ], 
+        
 
-    }
+    },
+    {
+        path: '*', 
+        element: <PageNotFound></PageNotFound>
+       }
+
 ])
