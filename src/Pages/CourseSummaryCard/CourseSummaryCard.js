@@ -2,14 +2,15 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
+
 const CourseSummaryCard = ({ course }) => {
     const { _id, image_url, rating, title, details } = course
     return (
 <div>
     
 
-      <Card style={{ width: '18rem' }} className="mt-3" >
-            <Card.Img variant="top" src={image_url} className="p-4"/>
+      <Card style={{ width: '18rem' , height:'40rem'}} className="mt-3" >
+            <Card.Img variant="top"  src={image_url} style={{ height:'20rem'}}  className="p-4 rounded"/>
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>
